@@ -37,13 +37,16 @@ The dataset includes variables like:
 - Weak at identifying rejected loans (Recall = 0.33 for class 0)
 
 ###  Random Forest (Tuned with GridSearchCV)
-- **Accuracy**: 0.84  
+- **Accuracy**: 0.85  
 - Strong, balanced performance  
-- **Best performing model overall**
+- Class 1 (approved): Precision = 0.91, Recall = 0.83
+- Class 0 (denied): Precision = 0.79, Recall = 0.88
 
 ###  XGBoost (Tuned with GridSearchCV)
-- **Accuracy**: 0.82  
-- Competitive, but slightly lower than Random Forest
+- **Accuracy**: 0.86  
+- **Best performing model overall**
+- Class 1 (approved): Precision = 0.88, Recall = 0.88
+- Class 0 (denied): Precision = 0.83, Recall = 0.83
 
 ---
 
@@ -66,9 +69,9 @@ The dataset includes variables like:
 
 ##  Key Takeaways
 
-- SMOTE significantly improved performance on the minority class.
-- Random Forest offered the best balance of precision and recall.
-- Custom engineered features like `loan_to_income` were highly predictive.
+- SMOTE significantly improved model performance by balancing the class distribution.
+- **XGBoost is the best-performing model**, with the strongest balance of precision and recall.
+- Feature engineering (household income and loan-to-income) added predictive power.
 
 ---
 
